@@ -21,41 +21,41 @@ body {
   height: 50px;
   background-color: #78C0A8; }
 
-.header-logo, .header-bash {
+._dollarify, .header-logo, .header-bash {
   color: rgba(255, 255, 255, 0.7);
   font-weight: 600;
   letter-spacing: -0.07em; }
-  .header-logo h1:before, .header-bash h1:before {
+  ._dollarify h1:before, .header-logo h1:before, .header-bash h1:before {
     content: "$";
     font-size: 75%; }
 
-.header-bash ul, .header-bash ul > div {
+.header-bash ul {
   list-style-type: none;
   margin: 0px;
   padding: 0px;
   display: inline; }
-  .header-bash ul > li, .header-bash ul > div > li {
-    display: inline; }
-    .header-bash ul > li .element, .header-bash ul > li .element-a, .header-bash ul > div > li .element-a, .header-bash ul > div > li .element, .header-bash ul > div > li .element-a {
-      display: inline; }
-    .header-bash ul > li .element-a:after, .header-bash ul > div > li .element-a:after {
-      content: " $$$ "; }
-    .header-bash ul > li a.exec, .header-bash ul > li div.exec, .header-bash ul > li a.module, .header-bash ul > li div.module, .header-bash ul > li a.value, .header-bash ul > li div.value, .header-bash ul > div > li a.exec, .header-bash ul > div > li div.exec, .header-bash ul > div > li a.module, .header-bash ul > div > li div.module, .header-bash ul > div > li a.value, .header-bash ul > div > li div.value {
-      display: inline; }
-    .header-bash ul > li a.exec:before, .header-bash ul > li div.exec:before, .header-bash ul > div > li a.exec:before, .header-bash ul > div > li div.exec:before {
-      content: "$pollbus-";
-      padding: 0em 0em 0em 0em; }
-    .header-bash ul > li a.exec:after, .header-bash ul > li div.exec:after, .header-bash ul > div > li a.exec:after, .header-bash ul > div > li div.exec:after {
-      content: ": ";
-      padding: 0em 0em; }
-    .header-bash ul > li div.module:after, .header-bash ul > div > li div.module:after {
-      content: " | "; }
-    .header-bash ul > li a.value:before, .header-bash ul > li div.value:before, .header-bash ul > div > li a.value:before, .header-bash ul > div > li div.value:before {
-      content: "{";
-      padding-right: 0.2em; }
-    .header-bash ul > li a.value:after, .header-bash ul > li div.value:after, .header-bash ul > div > li a.value:after, .header-bash ul > div > li div.value:after {
-      content: "}";
-      padding-left: 0.2em; }
+.header-bash ._inlinify, .header-bash li, .header-bash li > div, .header-bash li > a, .header-bash li > text {
+  display: inline-block; }
+.header-bash li .element, .header-bash li div.element-a, .header-bash li > div div.element-a, .header-bash li > a div.element-a, .header-bash li > text div.element-a, .header-bash li > div .element, .header-bash li > div div.element-a, .header-bash li > a .element, .header-bash li > a div.element-a, .header-bash li > text .element, .header-bash li > text div.element-a {
+  color: red; }
+.header-bash li div.element-a:after, .header-bash li > div div.element-a:after, .header-bash li > a div.element-a:after, .header-bash li > text div.element-a:after {
+  content: " $$$ "; }
+.header-bash li a.exec, .header-bash li div.exec, .header-bash li a.module, .header-bash li div.module, .header-bash li a.value, .header-bash li div.value, .header-bash li > div a.exec, .header-bash li > div div.exec, .header-bash li > div a.module, .header-bash li > div div.module, .header-bash li > div a.value, .header-bash li > div div.value, .header-bash li > a a.exec, .header-bash li > a div.exec, .header-bash li > a a.module, .header-bash li > a div.module, .header-bash li > a a.value, .header-bash li > a div.value, .header-bash li > text a.exec, .header-bash li > text div.exec, .header-bash li > text a.module, .header-bash li > text div.module, .header-bash li > text a.value, .header-bash li > text div.value {
+  display: inline; }
+.header-bash li a.exec:before, .header-bash li div.exec:before, .header-bash li > div a.exec:before, .header-bash li > div div.exec:before, .header-bash li > a a.exec:before, .header-bash li > a div.exec:before, .header-bash li > text a.exec:before, .header-bash li > text div.exec:before {
+  content: "$pollbus-";
+  padding: 0em 0em 0em 0em; }
+.header-bash li a.exec:after, .header-bash li div.exec:after, .header-bash li > div a.exec:after, .header-bash li > div div.exec:after, .header-bash li > a a.exec:after, .header-bash li > a div.exec:after, .header-bash li > text a.exec:after, .header-bash li > text div.exec:after {
+  content: ": ";
+  padding: 0em 0em; }
+.header-bash li div.module:after, .header-bash li > div div.module:after, .header-bash li > a div.module:after, .header-bash li > text div.module:after {
+  content: " | "; }
+.header-bash li a.value:before, .header-bash li div.value:before, .header-bash li > div a.value:before, .header-bash li > div div.value:before, .header-bash li > a a.value:before, .header-bash li > a div.value:before, .header-bash li > text a.value:before, .header-bash li > text div.value:before {
+  content: "{";
+  padding-right: 0.2em; }
+.header-bash li a.value:after, .header-bash li div.value:after, .header-bash li > div a.value:after, .header-bash li > div div.value:after, .header-bash li > a a.value:after, .header-bash li > a div.value:after, .header-bash li > text a.value:after, .header-bash li > text div.value:after {
+  content: "}";
+  padding-left: 0.2em; }
 
 .logo1 {
   display: block;

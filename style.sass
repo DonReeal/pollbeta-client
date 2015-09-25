@@ -47,9 +47,8 @@ body
 	/* Set the fixed height of the footer here */
 	height: $footer-height
 	background-color: $color-turquoise
-	
-.header-logo, .header-bash
-	//content: ">> Pollbus"
+
+._dollarify
 	color: rgba(255, 255, 255, 0.7)
 	font-weight: 600
 	letter-spacing: -0.07em
@@ -58,48 +57,59 @@ body
 			content: "$"
 			font-size: 75%
 
-.header-bash 
-	ul, ul > div
+
+.header-logo
+	@extend ._dollarify
+
+.header-bash
+	@extend ._dollarify 
+	
+	ul
 		list-style-type: none
 		margin: 0px
 		padding: 0px
 		display: inline	
-		> li
-			// all parts of the current active tab display
+	
+	._inlinify
+		display: inline-block
+
+	li, li > div, li > a, li > text
+		@extend ._inlinify
+		// all parts of the current active tab display
+		//display: inline
+
+		.element
+			color: red
+
+		div.element-a
+			@extend .element
+			&:after
+				content: " $$$ "
+
+		// #fugly: needs to be updates all the time
+		a.exec, div.exec, a.module, div.module, a.value, div.value
 			display: inline
 
-			.element
-				display: inline
+		a.exec, div.exec
+			&:before
+				content: "$pollbus-"
+				padding: 0em 0em 0em 0em
+			&:after
+				content: ": "
+				padding: 0em 0em
+		
+		// 
+		div.module
+			&:after
+				content: " | "
 
-			.element-a
-				@extend .element
-				&:after
-					content: " $$$ "
-
-			// #fugly: needs to be updates all the time
-			a.exec, div.exec, a.module, div.module, a.value, div.value
-				display: inline
-
-			a.exec, div.exec
-				&:before
-					content: "$pollbus-"
-					padding: 0em 0em 0em 0em
-				&:after
-					content: ": "
-					padding: 0em 0em
-			
-			// 
-			div.module
-				&:after
-					content: " | "
-
-			a.value, div.value
-				&:before
-					content: "{"
-					padding-right: 0.2em
-				&:after
-					content: "}"
-					padding-left: 0.2em
+		a.value, div.value
+			&:before
+				content: "{"
+				padding-right: 0.2em
+			&:after
+				content: "}"
+				padding-left: 0.2em
 
 			
 .logo1
