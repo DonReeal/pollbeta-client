@@ -48,7 +48,7 @@ body
 	height: $footer-height
 	background-color: $color-turquoise
 
-._dollarify
+=dollarify
 	color: rgba(255, 255, 255, 0.7)
 	font-weight: 600
 	letter-spacing: -0.07em
@@ -59,10 +59,10 @@ body
 
 
 .header-logo
-	@extend ._dollarify
+	+dollarify
 
 .header-bash
-	@extend ._dollarify 
+	+dollarify 
 	
 	ul
 		list-style-type: none
@@ -86,17 +86,17 @@ body
 		&:after
 			content: " $$$ "
 
-		// #fugly: needs to be updates all the time
-		a.exec, div.exec, a.module, div.module, a.value, div.value
-			display: inline
+	// #fugly: needs to be updates all the time
+	a.exec, div.exec, a.module, div.module, a.value, div.value
+		display: inline
 
-		a.exec, div.exec
-			&:before
-				content: "$pollbus-"
-				padding: 0em 0em 0em 0em
-			&:after
-				content: ": "
-				padding: 0em 0em
+	a.exec, div.exec
+		&:before
+			content: "$pollbus-"
+			padding: 0em 0em 0em 0em
+		&:after
+			content: ": "
+			padding: 0em 0em
 		
 		// 
 		div.module

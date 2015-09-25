@@ -21,40 +21,47 @@ body {
   height: 50px;
   background-color: #78C0A8; }
 
-._dollarify, .header-logo, .header-bash {
+.header-logo {
   color: rgba(255, 255, 255, 0.7);
   font-weight: 600;
   letter-spacing: -0.07em; }
-  ._dollarify h1:before, .header-logo h1:before, .header-bash h1:before {
+  .header-logo h1:before {
     content: "$";
     font-size: 75%; }
 
-.header-bash ul {
-  list-style-type: none;
-  margin: 0px;
-  padding: 0px; }
-.header-bash li, .header-bash li > div, .header-bash li > a, .header-bash li > span {
-  display: inline-block; }
-.header-bash ._element, .header-bash .element-a {
-  color: blue; }
-.header-bash .element-a {
-  color: red; }
-  .header-bash .element-a:after {
-    content: " $$$ "; }
-  .header-bash .element-a a.exec, .header-bash .element-a div.exec, .header-bash .element-a a.module, .header-bash .element-a div.module, .header-bash .element-a a.value, .header-bash .element-a div.value {
+.header-bash {
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 600;
+  letter-spacing: -0.07em; }
+  .header-bash h1:before {
+    content: "$";
+    font-size: 75%; }
+  .header-bash ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px; }
+  .header-bash li, .header-bash li > div, .header-bash li > a, .header-bash li > span {
+    display: inline-block; }
+  .header-bash ._element, .header-bash .element-a {
+    color: blue; }
+  .header-bash .element-a {
+    color: red; }
+    .header-bash .element-a:after {
+      content: " $$$ "; }
+  .header-bash a.exec, .header-bash div.exec, .header-bash a.module, .header-bash div.module, .header-bash a.value, .header-bash div.value {
     display: inline; }
-  .header-bash .element-a a.exec:before, .header-bash .element-a div.exec:before {
+  .header-bash a.exec:before, .header-bash div.exec:before {
     content: "$pollbus-";
     padding: 0em 0em 0em 0em; }
-  .header-bash .element-a a.exec:after, .header-bash .element-a div.exec:after {
+  .header-bash a.exec:after, .header-bash div.exec:after {
     content: ": ";
     padding: 0em 0em; }
-  .header-bash .element-a div.module:after {
+  .header-bash a.exec div.module:after, .header-bash div.exec div.module:after {
     content: " | "; }
-  .header-bash .element-a a.value:before, .header-bash .element-a div.value:before {
+  .header-bash a.exec a.value:before, .header-bash a.exec div.value:before, .header-bash div.exec a.value:before, .header-bash div.exec div.value:before {
     content: "{";
     padding-right: 0.2em; }
-  .header-bash .element-a a.value:after, .header-bash .element-a div.value:after {
+  .header-bash a.exec a.value:after, .header-bash a.exec div.value:after, .header-bash div.exec a.value:after, .header-bash div.exec div.value:after {
     content: "}";
     padding-left: 0.2em; }
 
