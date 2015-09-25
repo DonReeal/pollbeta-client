@@ -67,24 +67,24 @@ body
 	ul
 		list-style-type: none
 		margin: 0px
-		padding: 0px
-		display: inline	
+		padding: 0px	
 	
-	._inlinify
+	=inlinify
 		display: inline-block
 
-	li, li > div, li > a, li > text
-		@extend ._inlinify
+	li, li > div, li > a, li > span
+		+inlinify
 		// all parts of the current active tab display
 		//display: inline
+		
+	._element
+		color: blue
 
-		.element
-			color: red
-
-		div.element-a
-			@extend .element
-			&:after
-				content: " $$$ "
+	.element-a
+		@extend ._element
+		color: red
+		&:after
+			content: " $$$ "
 
 		// #fugly: needs to be updates all the time
 		a.exec, div.exec, a.module, div.module, a.value, div.value
