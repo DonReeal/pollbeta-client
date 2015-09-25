@@ -13,13 +13,21 @@ app.controller('chatController', ['$scope', function($scope) {
 	$scope.loggingIn = false;
 
 	$scope.login = function() {
-		console.log("OUT: Login called for user: " + $scope.userName);
+
+		if(!($scope.userName && $scope.userPassword)) {
+			alert("Enter credentials to login");
+			console.log("Login abortet!");
+			return;
+		}
+
 		$scope.loggingIn = true;
 		$scope.chatService.query(
 			"/chat-session", "login",					// service + method name to call
 			[$scope.userName, $scope.userPassword],		// parameters
 			$scope.onLogin								// result handle
 		);
+		console.log("OUT: Login called for user: " + $scope.userName);
+		
 	};
 
 	$scope.onLogin = function(result) {

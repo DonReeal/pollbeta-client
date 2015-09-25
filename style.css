@@ -5,7 +5,7 @@ html {
 body {
   margin-top: 98px;
   margin-bottom: 50px;
-  background-color: rgba(120, 192, 168, 0.3); }
+  background-color: #5e412f; }
 
 .header {
   position: absolute;
@@ -21,47 +21,52 @@ body {
   height: 50px;
   background-color: #78C0A8; }
 
-.header-logo {
+#header-logo {
   color: rgba(255, 255, 255, 0.7);
   font-weight: 600;
-  letter-spacing: -0.07em; }
-  .header-logo h1:before {
+  letter-spacing: -0.07em;
+  cursor: default;
+  -moz-selection: "background: transparent color: inherit";
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none; }
+  #header-logo h1:before, #header-logo h2:before, #header-logo h3:before, #header-logo h4:before {
     content: "$";
     font-size: 75%; }
 
-.header-bash {
+#header-bash {
   color: rgba(255, 255, 255, 0.7);
   font-weight: 600;
-  letter-spacing: -0.07em; }
-  .header-bash h1:before {
-    content: "$";
-    font-size: 75%; }
-  .header-bash ul {
+  letter-spacing: -0.07em;
+  cursor: default;
+  -moz-selection: "background: transparent color: inherit";
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  padding-bottom: 5px; }
+  #header-bash ul {
     list-style-type: none;
     margin: 0px;
     padding: 0px; }
-  .header-bash li, .header-bash li > div, .header-bash li > a, .header-bash li > span {
+  #header-bash li, #header-bash li > div, #header-bash li > a, #header-bash li > span {
     display: inline-block; }
-  .header-bash ._element, .header-bash .element-a {
-    color: blue; }
-  .header-bash .element-a {
-    color: red; }
-    .header-bash .element-a:after {
-      content: " $$$ "; }
-  .header-bash a.exec, .header-bash div.exec, .header-bash a.module, .header-bash div.module, .header-bash a.value, .header-bash div.value {
-    display: inline; }
-  .header-bash a.exec:before, .header-bash div.exec:before {
+  #header-bash a {
+    cursor: pointer;
+    text-decoration: none !important; }
+  #header-bash .exec:before {
     content: "$pollbus-";
     padding: 0em 0em 0em 0em; }
-  .header-bash a.exec:after, .header-bash div.exec:after {
+  #header-bash .exec:after {
     content: ": ";
     padding: 0em 0em; }
-  .header-bash a.exec div.module:after, .header-bash div.exec div.module:after {
+  #header-bash .module:after {
     content: " | "; }
-  .header-bash a.exec a.value:before, .header-bash a.exec div.value:before, .header-bash div.exec a.value:before, .header-bash div.exec div.value:before {
+  #header-bash .value:before {
     content: "{";
     padding-right: 0.2em; }
-  .header-bash a.exec a.value:after, .header-bash a.exec div.value:after, .header-bash div.exec a.value:after, .header-bash div.exec div.value:after {
+  #header-bash .value:after {
     content: "}";
     padding-left: 0.2em; }
 
@@ -74,6 +79,12 @@ body {
   text-shadow: -8px -6px rgba(0, 0, 255, 0.1), 8px 6px rgba(255, 0, 0, 0.3); }
 
 .logo {
+  cursor: default;
+  -moz-selection: "background: transparent color: inherit";
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
   display: block;
   font: 210px Helvetica, Sans-Serif;
   font-weight: 600;
@@ -81,14 +92,21 @@ body {
   letter-spacing: -22px;
   text-shadow: -1px -1px 1px rgba(255, 255, 255, 0.08), -2px -2px 2px rgba(255, 255, 255, 0.05), 1px 1px 2px rgba(0, 0, 0, 0.1), 2px 2px 3px rgba(128, 128, 128, 0.05), 8px 6px 6px rgba(0, 0, 0, 0.2); }
 
-.logo-relief-negative {
+#bg-logo-relief-negative {
+  cursor: default;
+  -moz-selection: "background: transparent color: inherit";
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
   display: block;
   font: 210px Helvetica, Sans-Serif;
   font-weight: 600;
   color: rgba(0, 0, 0, 0.3);
   letter-spacing: -0.07em;
+  padding-top: 100%;
   text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.08), -2px -2px 2px rgba(0, 0, 0, 0.05), 1px 1px 2px rgba(255, 255, 255, 0.1), 2px 2px 3px rgba(255, 255, 255, 0.005), 8px 6px 6px rgba(255, 255, 255, 0.01); }
-  .logo-relief-negative:before {
+  #bg-logo-relief-negative:before {
     content: "$";
     font-size: 72%; }
 
@@ -105,7 +123,7 @@ body {
 .warning {
   border-color: yellow; }
 
-#page-pollbus-main {
+#main-content {
   min-height: 300px;
   padding: 18px 0px; }
 

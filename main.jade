@@ -20,7 +20,7 @@ html
       .container
         .row
           .col-xs-6
-            .header-logo 
+            #header-logo 
               h1 pollbus 
           .col-xs-6.text-right
             form#login-form(ng-class="userForm" role="form")
@@ -30,29 +30,19 @@ html
               input.btn.btn-danger.login-button(value="Raus hier!" type="submit" ng-click="logout()" ng-show="loggedIn")
         .row
           .col-xs-6
-            .header-bash
+            #header-bash
               ul#bash-elements
-                li
-                  .exec chat
-                li 
-                  .module public
-                li._element li.element
-                li
-                  ._element li.div.element
-                li.element-a li.element-a
-                li
-                  .element-a li.div.element-a
-                li
-                  .module german
-                li
-                  .module wankers
+                li.exec chat
+                li.module public
+                li.module german
+                li.module wankers
                 li
                   a.value(onclick="valueExpand()") 127
     #main-content
       .container
         .row
           .col-xs-12.text-center
-            h1.logo-relief-negative pollbus
+            h1#bg-logo-relief-negative chocolate.io
 
 
     footer.footer 
