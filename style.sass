@@ -1,0 +1,188 @@
+@import "bootstrap/css/bootstrap.css"
+
+//============================================
+//= GLOBAL LAYOUT
+// COLORS http://www.colourlovers.com/palette/919313/Papua_New_Guinea
+$history: #5E412F
+$black-tea: #FCEBB6
+$tweakedturqouise: #78C0A8
+$full-orange: #F07818
+$joystiq-gold: #F0A830
+
+// memorizable names ...
+$color-brown-dark: $history
+$color-sand: $black-tea
+$color-turquoise: $tweakedturqouise
+$color-orange: $full-orange
+$color-gold: $joystiq-gold
+
+$color-grey-light: #f5f5f5
+
+$header-heigth: 98px
+$footer-height: 50px
+//===============================================
+
+html
+	//position: relative
+	min-height: 100%
+body
+	// Margin bottom by footer height
+	margin-top: $header-heigth
+	margin-bottom: $footer-height
+	background-color: rgba($color-turquoise,0.3)
+
+.header
+	position: absolute
+	top: 0
+	width: 100%
+	//height: $header-heigth
+	background-color: $color-turquoise
+	//&:after
+	//	overflow: auto
+
+.footer
+	position: absolute
+	bottom: 0
+	width: 100%
+	/* Set the fixed height of the footer here */
+	height: $footer-height
+	background-color: $color-turquoise
+	
+.header-logo, .header-bash
+	//content: ">> Pollbus"
+	color: rgba(255, 255, 255, 0.7)
+	font-weight: 600
+	letter-spacing: -0.07em
+	h1
+		&:before
+			content: "$"
+			font-size: 75%
+
+.header-bash 
+	ul, ul > div
+		list-style-type: none
+		margin: 0px
+		padding: 0px
+		display: inline	
+		> li
+			// all parts of the current active tab display
+			display: inline
+
+			.element
+				display: inline
+
+			.element-a
+				@extend .element
+				&:after
+					content: " $$$ "
+
+			// #fugly: needs to be updates all the time
+			a.exec, div.exec, a.module, div.module, a.value, div.value
+				display: inline
+
+			a.exec, div.exec
+				&:before
+					content: "$pollbus-"
+					padding: 0em 0em 0em 0em
+				&:after
+					content: ": "
+					padding: 0em 0em
+			
+			// 
+			div.module
+				&:after
+					content: " | "
+
+			a.value, div.value
+				&:before
+					content: "{"
+					padding-right: 0.2em
+				&:after
+					content: "}"
+					padding-left: 0.2em
+
+			
+.logo1
+	display: block
+	// text-align: center
+	// overflow: hidden
+	// position: absolute
+	font: 210px Helvetica, Sans-Serif
+	font-weight: 600
+	color: rgba(0,0,255,0.51)
+	// text-shadow: 0px 2px 3px #555
+	letter-spacing: -22px
+	text-shadow: -8px -6px rgba(0,0,255,0.1), 8px 6px rgba(255,0,0,0.3)
+
+.logo 
+	// relief positive
+	display: block
+	font: 210px Helvetica, Sans-Serif
+	font-weight: 600
+	color: rgba($color-brown-dark,1)
+	letter-spacing: -22px
+	text-shadow: -1px -1px 1px rgba(white,0.08), -2px -2px 2px rgba(white,0.05),1px 1px 2px rgba(black,0.1),2px 2px 3px rgba(grey,0.05),8px 6px 6px rgba(black,0.2)
+
+.logo-relief-negative
+	// relief negative
+	display: block
+	font: 210px Helvetica, Sans-Serif
+	font-weight: 600
+	color: rgba(black,0.3)
+	letter-spacing: -0.07em 
+	// -20px
+	text-shadow: -1px -1px 1px rgba(black,0.08), -2px -2px 2px rgba(black,0.05),1px 1px 2px rgba(white,0.1),2px 2px 3px rgba(white,0.005),8px 6px 6px rgba(white,0.01)
+	&:before
+		content: "$"
+		font-size: 72%
+
+.message
+	border: 1px solid #ccc
+	//padding: 10px
+	color: #333
+.success
+	@extend .message
+	border-color: green
+.error
+	@extend .message
+	border-color: red
+.warning
+	@extend .message
+	border-color: yellow
+
+#page-pollbus-main
+	min-height: 300px
+	padding: 18px 0px
+
+#login-form
+	margin: 26px 0px
+	position: relative
+	.login-form-element
+		padding-left: 5px
+		color: $color-brown-dark
+
+#login-form-table-df
+	vertical-align: middle
+	bottom: 0px
+	float: right
+	background-color: #ccc
+
+.login-label
+	color: rgba(255,255,255,0.88)
+	// text-shadow: 2px 2px 5px #ccc
+	&:after
+		content: ":"
+		color: rgba(255,255,255,0.55)
+
+#login-form-table
+	margin: 10px
+
+.login-button
+	font-size: 0.8em
+	padding: 4px
+	margin-top: -1px
+
+.animation
+	height: 600px
+	width: 100%
+	color: $color-brown-dark

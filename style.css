@@ -1,0 +1,136 @@
+@import url(bootstrap/css/bootstrap.css);
+html {
+  min-height: 100%; }
+
+body {
+  margin-top: 98px;
+  margin-bottom: 50px;
+  background-color: rgba(120, 192, 168, 0.3); }
+
+.header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background-color: #78C0A8; }
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 50px;
+  background-color: #78C0A8; }
+
+.header-logo, .header-bash {
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 600;
+  letter-spacing: -0.07em; }
+  .header-logo h1:before, .header-bash h1:before {
+    content: "$";
+    font-size: 75%; }
+
+.header-bash ul, .header-bash ul > div {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+  display: inline; }
+  .header-bash ul > li, .header-bash ul > div > li {
+    display: inline; }
+    .header-bash ul > li .element, .header-bash ul > li .element-a, .header-bash ul > div > li .element-a, .header-bash ul > div > li .element, .header-bash ul > div > li .element-a {
+      display: inline; }
+    .header-bash ul > li .element-a:after, .header-bash ul > div > li .element-a:after {
+      content: " $$$ "; }
+    .header-bash ul > li a.exec, .header-bash ul > li div.exec, .header-bash ul > li a.module, .header-bash ul > li div.module, .header-bash ul > li a.value, .header-bash ul > li div.value, .header-bash ul > div > li a.exec, .header-bash ul > div > li div.exec, .header-bash ul > div > li a.module, .header-bash ul > div > li div.module, .header-bash ul > div > li a.value, .header-bash ul > div > li div.value {
+      display: inline; }
+    .header-bash ul > li a.exec:before, .header-bash ul > li div.exec:before, .header-bash ul > div > li a.exec:before, .header-bash ul > div > li div.exec:before {
+      content: "$pollbus-";
+      padding: 0em 0em 0em 0em; }
+    .header-bash ul > li a.exec:after, .header-bash ul > li div.exec:after, .header-bash ul > div > li a.exec:after, .header-bash ul > div > li div.exec:after {
+      content: ": ";
+      padding: 0em 0em; }
+    .header-bash ul > li div.module:after, .header-bash ul > div > li div.module:after {
+      content: " | "; }
+    .header-bash ul > li a.value:before, .header-bash ul > li div.value:before, .header-bash ul > div > li a.value:before, .header-bash ul > div > li div.value:before {
+      content: "{";
+      padding-right: 0.2em; }
+    .header-bash ul > li a.value:after, .header-bash ul > li div.value:after, .header-bash ul > div > li a.value:after, .header-bash ul > div > li div.value:after {
+      content: "}";
+      padding-left: 0.2em; }
+
+.logo1 {
+  display: block;
+  font: 210px Helvetica, Sans-Serif;
+  font-weight: 600;
+  color: rgba(0, 0, 255, 0.51);
+  letter-spacing: -22px;
+  text-shadow: -8px -6px rgba(0, 0, 255, 0.1), 8px 6px rgba(255, 0, 0, 0.3); }
+
+.logo {
+  display: block;
+  font: 210px Helvetica, Sans-Serif;
+  font-weight: 600;
+  color: #5e412f;
+  letter-spacing: -22px;
+  text-shadow: -1px -1px 1px rgba(255, 255, 255, 0.08), -2px -2px 2px rgba(255, 255, 255, 0.05), 1px 1px 2px rgba(0, 0, 0, 0.1), 2px 2px 3px rgba(128, 128, 128, 0.05), 8px 6px 6px rgba(0, 0, 0, 0.2); }
+
+.logo-relief-negative {
+  display: block;
+  font: 210px Helvetica, Sans-Serif;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.3);
+  letter-spacing: -0.07em;
+  text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.08), -2px -2px 2px rgba(0, 0, 0, 0.05), 1px 1px 2px rgba(255, 255, 255, 0.1), 2px 2px 3px rgba(255, 255, 255, 0.005), 8px 6px 6px rgba(255, 255, 255, 0.01); }
+  .logo-relief-negative:before {
+    content: "$";
+    font-size: 72%; }
+
+.message, .success, .error, .warning {
+  border: 1px solid #ccc;
+  color: #333; }
+
+.success {
+  border-color: green; }
+
+.error {
+  border-color: red; }
+
+.warning {
+  border-color: yellow; }
+
+#page-pollbus-main {
+  min-height: 300px;
+  padding: 18px 0px; }
+
+#login-form {
+  margin: 26px 0px;
+  position: relative; }
+  #login-form .login-form-element {
+    padding-left: 5px;
+    color: #5E412F; }
+
+#login-form-table-df {
+  vertical-align: middle;
+  bottom: 0px;
+  float: right;
+  background-color: #ccc; }
+
+.login-label {
+  color: rgba(255, 255, 255, 0.88); }
+  .login-label:after {
+    content: ":";
+    color: rgba(255, 255, 255, 0.55); }
+
+#login-form-table {
+  margin: 10px; }
+
+.login-button {
+  font-size: 0.8em;
+  padding: 4px;
+  margin-top: -1px; }
+
+.animation {
+  height: 600px;
+  width: 100%;
+  color: #5E412F; }
+
+/*# sourceMappingURL=style.css.map */

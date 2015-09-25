@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.7/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.7/angular-animate.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.7/angular-route.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.7/angular-resource.js"></script>
+    <script src="baratine-js.js"></script>
+  </head>
+  <body ng-app="chat" ng-controller="chatController">
+    <div class="header">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-6">
+            <div class="header-logo"> 
+              <h1>pollbus </h1>
+            </div>
+          </div>
+          <div class="col-xs-6 text-right">
+            <form id="login-form" ng-class="userForm" role="form">
+              <input ng-model="userName" ng-show="!loggedIn" type="text" placeholder="Login" class="login-form-element">
+              <input ng-model="userPassword" type="password" placeholder="Password" ng-show="!loggedIn" class="login-form-element">
+              <input value="Anmelden" type="submit" ng-click="login()" ng-show="!loggedIn" ng-disabled="loggingIn" class="btn btn-primary login-button">
+              <input value="Raus hier!" type="submit" ng-click="logout()" ng-show="loggedIn" class="btn btn-danger login-button">
+            </form>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-6">
+            <div class="header-bash">
+              <ul id="bash-elements">
+                <li>
+                  <div class="exec">chat</div>
+                </li>
+                <li> 
+                  <div class="module">public</div>
+                </li>
+                <li class="element">element</li>
+                <li class="element-a">element-a</li>
+                <li>
+                  <div class="module">german</div>
+                </li>
+                <li>
+                  <div class="module">wankers</div>
+                </li>
+                <li><a onclick="valueExpand()" class="value">127</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="main-content">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 text-center">
+            <h1 class="logo-relief-negative">pollbus</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer"> 
+      <div class="container">
+        <div class="row"> 
+          <div class="col-xs-2 header-logo">Chatboxes go here</div>
+        </div>
+      </div>
+    </footer>
+    <!-- app-->
+    <script src="js/chat.js"></script>
+    <!-- controllers-->
+    <script src="js/chatController.js"> </script>
+  </body>
+</html>
