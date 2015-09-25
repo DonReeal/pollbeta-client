@@ -12,6 +12,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.7/angular-route.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.7/angular-resource.js"></script>
     <script src="baratine-js.js"></script>
+    <!-- app-->
+    <script src="js/chat.js"></script>
+    <!-- controllers-->
+    <script src="js/chatController.js"></script>
   </head>
   <body ng-app="chat" ng-controller="chatController">
     <div class="header">
@@ -49,6 +53,9 @@
     <div id="main-content">
       <div class="container">
         <div class="row">
+          <canvas class="animation"></canvas>
+        </div>
+        <div class="row">
           <div class="col-xs-12 text-center">
             <h1 id="bg-logo-relief-negative">chocolate.io</h1>
           </div>
@@ -58,13 +65,9 @@
     <footer class="footer"> 
       <div class="container">
         <div class="row"> 
-          <div class="col-xs-2 header-logo">Chatboxes go here</div>
+          <div class="col-xs-2 header-logo">Chatboxes go here </div>
         </div>
       </div>
     </footer>
-    <!-- app-->
-    <script src="js/chat.js"></script>
-    <!-- controllers-->
-    <script src="js/chatController.js"> </script>
   </body>
 </html>
