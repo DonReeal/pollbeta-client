@@ -32,7 +32,7 @@ body {
   -moz-user-select: none;
   user-select: none; }
   #header-logo h1:before, #header-logo h2:before, #header-logo h3:before, #header-logo h4:before {
-    content: "$";
+    content: "?";
     font-size: 88%; }
 
 #header-bash {
@@ -107,7 +107,7 @@ body {
   padding-top: 100%;
   text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.08), -2px -2px 2px rgba(0, 0, 0, 0.05), 1px 1px 2px rgba(255, 255, 255, 0.1), 2px 2px 3px rgba(255, 255, 255, 0.005), 8px 6px 6px rgba(255, 255, 255, 0.01); }
   #bg-logo-relief-negative h1:before {
-    content: "$";
+    content: "?";
     font-size: 88%; }
 
 .message, .success, .error, .warning {
