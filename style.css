@@ -1,11 +1,14 @@
 @import url(bootstrap/css/bootstrap.css);
+.container {
+  border: 1px dotted black; }
+
 html {
   min-height: 100%; }
 
 body {
-  margin-top: 103px;
+  margin-top: 96px;
   margin-bottom: 50px;
-  background-color: #5e412f; }
+  background-color: #f0a830; }
 
 .header {
   position: absolute;
@@ -20,6 +23,11 @@ body {
   /* Set the fixed height of the footer here */
   height: 50px;
   background-color: #78C0A8; }
+
+p.font-logo {
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 600;
+  letter-spacing: -0.07em; }
 
 #header-logo {
   color: rgba(255, 255, 255, 0.7);
@@ -53,7 +61,7 @@ body {
   #header-bash li, #header-bash li > div, #header-bash li > a, #header-bash li > span {
     display: inline-block; }
   #header-bash a {
-    cursor: pointer;
+    cursor: pointer !important;
     text-decoration: none !important; }
   #header-bash .exec:before {
     content: "$pollbus-";
@@ -125,38 +133,72 @@ body {
 
 #main-content {
   min-height: 300px;
-  padding: 18px 0px; }
+  padding: 0px 0px; }
 
 #login-form {
-  margin: 26px 0px;
-  position: relative; }
+  text-align: right;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  position: relative;
+  float: right; }
   #login-form .login-form-element {
+    max-width: 100%;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    margin-left: 0.5em;
+    margin-right: 0em; }
+  #login-form .login-label {
+    color: rgba(255, 255, 255, 0.88); }
+    #login-form .login-label:after {
+      content: ":";
+      color: rgba(255, 255, 255, 0.55); }
+  #login-form .login-field {
     padding-left: 5px;
-    color: #5E412F; }
-
-#login-form-table-df {
-  vertical-align: middle;
-  bottom: 0px;
-  float: right;
-  background-color: #ccc; }
-
-.login-label {
-  color: rgba(255, 255, 255, 0.88); }
-  .login-label:after {
-    content: ":";
-    color: rgba(255, 255, 255, 0.55); }
-
-#login-form-table {
-  margin: 10px; }
-
-.login-button {
-  font-size: 0.8em;
-  padding: 4px;
-  margin-top: -1px; }
+    padding-right: 5px; }
+  #login-form .login-button {
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 600;
+    letter-spacing: -0.07em;
+    font-size: 0.8em;
+    color: rgba(255, 255, 255, 0.88);
+    text-align: left;
+    padding-left: 6px;
+    padding-right: 6px;
+    padding-top: 4px;
+    padding-bottom: 2px;
+    border-radius: 0px 0px 0px 0px; }
 
 .animation {
   height: 600px;
   width: 100%;
   color: #5E412F; }
+
+#chat-bar {
+  height: 50px;
+  position: relative; }
+  #chat-bar text.hover {
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 600;
+    letter-spacing: -0.07em;
+    color: #f0a830; }
+  #chat-bar text.inactive {
+    @extend: text.test;
+    color: rgba(94, 65, 47, 0.5); }
+  #chat-bar .chat-window {
+    text-align: left;
+    float: right;
+    margin: 0px; }
+  #chat-bar div.panel {
+    margin-bottom: 0px;
+    border-radius: 5px 5px 0px 0px;
+    background-color: #78C0A8;
+    line: 1px dotted black;
+    padding-top: 10px; }
+  #chat-bar .top-bar {
+    background: #666;
+    color: white;
+    padding: 5px;
+    position: relative;
+    overflow: hidden; }
 
 /*# sourceMappingURL=style.css.map */

@@ -26,33 +26,40 @@ html
           .col-xs-6
             #header-logo 
               h1 pollbus 
-          .col-xs-6.text-right
-            form#login-form(ng-class="userForm" role="form")
-              input.login-form-element(ng-model="userName" ng-show="!loggedIn" type="text" placeholder="Login")
-              input.login-form-element(ng-model="userPassword" type="password" placeholder="Password" ng-show="!loggedIn")
-              input.btn.btn-primary.login-button(value="Anmelden" type="submit" ng-click="login()" ng-show="!loggedIn" ng-disabled="loggingIn")
-              input.btn.btn-danger.login-button(value="Raus hier!" type="submit" ng-click="logout()" ng-show="loggedIn")
+          .col-xs-6
+            #login-form
+              form(ng-class="userForm" role="form").form-inline
+                .form-group
+                  label.sr-only(for="userName") Name
+                  input.login-field(ng-model="userName" ng-show="!loggedIn" type="text" placeholder="Login")
+                .form-group
+                  label.sr-only(for="userPassword") Password  
+                  input.login-field(ng-model="userPassword" type="password" placeholder="Password" ng-show="!loggedIn")
+                .clearfix.visible-md.visible-sm.visible-xs 
+                input.btn.btn-primary.login-button(value="Anmelden" type="submit" ng-click="login()" ng-show="!loggedIn" ng-disabled="loggingIn")
+                input.btn.btn-danger.login-button(value="Raus hier!" type="submit" ng-click="logout()" ng-show="loggedIn")
+
         .row
           .col-xs-6
             #header-bash
               ul#bash-elements
                 li.exec chat
                 li.module public
-                li.module german
+                li.module animals
                 li.module funnycats
                 li
-                  a.value(onclick="valueExpand()") 127
+                  a.value(onclick="valueExpand()") incoming: 8
     #main-content
       .container
         .row
-          canvas.animation
-        .row
-          .col-xs-12.text-center
-            #bg-logo-relief-negative 
+            #bg-logo-relief-negative.col-xs-12.text-center 
               h1 chocolate
 
-
-    footer.footer 
-      .container
-        .row 
-          .col-xs-2.header-logo Chatboxes go here 
+    footer.footer
+      #chat-bar.container
+        .row
+          #boostrap2.col-xs-2.chat-window
+            #boostrap12.col-xs-12
+              .panel.panel-default
+                .panel-heading.top-bar
+                    text.hover #FunnyCats

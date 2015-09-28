@@ -1,5 +1,9 @@
 @import "bootstrap/css/bootstrap.css"
 
+// #DEVELOP, #TEST
+.container
+	border: 1px dotted black
+
 //============================================
 //= GLOBAL LAYOUT
 // COLORS http://www.colourlovers.com/palette/919313/Papua_New_Guinea
@@ -18,7 +22,7 @@ $color-gold: $joystiq-gold
 
 $color-grey-light: #f5f5f5
 
-$header-heigth: 103px
+$header-heigth: 96px
 $footer-height: 50px
 //===============================================
 
@@ -29,8 +33,7 @@ body
 	// Margin bottom by footer height
 	margin-top: $header-heigth
 	margin-bottom: $footer-height
-	background-color: rgba($color-brown-dark,1)
-
+	background-color: rgba($color-gold,1)
 
 .header
 	position: absolute
@@ -55,6 +58,9 @@ body
 	font-weight: 600
 	letter-spacing: -0.07em
 
+p.font-logo
+	+logo-font-style
+
 =deselect
 	// a bit messy to put cursor here ..
 	cursor: default 
@@ -76,6 +82,7 @@ body
 	h1,h2,h3,h4
 		+dollarify
 // ===================
+
 #header-bash
 	+logo-font-style
 	+deselect
@@ -94,7 +101,7 @@ body
 		// all parts of the current active tab display
 	
 	a
-		cursor: pointer
+		cursor: pointer !important
 		text-decoration: none !important
 	
 	.exec
@@ -141,20 +148,14 @@ body
 	h1
 		// relief negative
 		+dollarify
-		// why doenst that work? +dollarify
 		+deselect
 		display: block
 		font: 210px Helvetica, Sans-Serif
 		font-weight: 600
 		color: rgba(black,0.3)
 		letter-spacing: -0.07em
-		padding-top: 100% 
-		// -20px
+		padding-top: 100%
 		text-shadow: -1px -1px 1px rgba(black,0.08), -2px -2px 2px rgba(black,0.05),1px 1px 2px rgba(white,0.1),2px 2px 3px rgba(white,0.005),8px 6px 6px rgba(white,0.01)
-	
-		//&:before
-		//	content: "$"
-		//	font-size: 72%
 
 .message
 	border: 1px solid #ccc
@@ -172,37 +173,96 @@ body
 
 #main-content
 	min-height: 300px
-	padding: 18px 0px
+	padding: 0px 0px
 
+// **************************************
+// LOGIN_FORM
+// **************************************
 #login-form
-	margin: 26px 0px
+	text-align: right
+	// matching h1 margin
+	margin-top: 20px
+	margin-bottom: 10px
 	position: relative
-	.login-form-element
-		padding-left: 5px
-		color: $color-brown-dark
-
-#login-form-table-df
-	vertical-align: middle
-	bottom: 0px
 	float: right
-	background-color: #ccc
+	
+	.login-form-element
+		max-width: 100%
+		padding-left: 0.5em
+		padding-right: 0.5em
+		margin-left: 0.5em
+		margin-right: 0.0em
+		// background-color: rgba($color-brown-dark, 0.7)
+		// color: $color-orange
 
-.login-label
-	color: rgba(255,255,255,0.88)
-	// text-shadow: 2px 2px 5px #ccc
-	&:after
-		content: ":"
-		color: rgba(255,255,255,0.55)
+	.login-label
+		color: rgba(255,255,255,0.88)
+		// text-shadow: 2px 2px 5px #ccc
+		&:after
+			content: ":"
+			color: rgba(255,255,255,0.55)
 
-#login-form-table
-	margin: 10px
+	.login-field
+		padding-left: 5px
+		padding-right: 5px
 
-.login-button
-	font-size: 0.8em
-	padding: 4px
-	margin-top: -1px
+	.login-button
+		+logo-font-style
+		font-size: 0.8em
+		color: rgba(255,255,255,0.88)
+		text-align: left
 
+		padding-left: 6px
+		padding-right: 6px
+		padding-top: 4px
+		padding-bottom: 2px
+		
+		// topleft topright botright botleft
+		border-radius: 0px 0px 0px 0px
+		//margin-left: 0.5em
+		//padding-top: 4px
+		//margin-top: -1px
+
+
+// EVERYTHING ELSE
 .animation
 	height: 600px
 	width: 100%
 	color: $color-brown-dark
+
+
+
+$chat-bar-heigth: 50px
+#chat-bar
+	height: $chat-bar-heigth
+	position: relative
+	// #fugly: currently I am using those ids as namespaces ...
+
+	text.hover 
+		+logo-font-style
+		color: rgba($color-gold, 1)
+
+	text.inactive
+		@extend: text.test
+		color: rgba($color-brown-dark, 0.5)
+
+	.chat-window
+		text-align: left
+		// bottom: 0
+		// position: fixed
+		float: right
+		margin: 0px
+
+	div.panel
+		margin-bottom: 0px
+		border-radius: 5px 5px 0px 0px
+		background-color: $color-turquoise
+		line: 1px dotted black
+		padding-top: 10px
+
+	.top-bar
+		background: #666
+		color: white
+		padding: 5px
+		position: relative
+		overflow: hidden

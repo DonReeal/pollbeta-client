@@ -26,13 +26,22 @@
               <h1>pollbus </h1>
             </div>
           </div>
-          <div class="col-xs-6 text-right">
-            <form id="login-form" ng-class="userForm" role="form">
-              <input ng-model="userName" ng-show="!loggedIn" type="text" placeholder="Login" class="login-form-element">
-              <input ng-model="userPassword" type="password" placeholder="Password" ng-show="!loggedIn" class="login-form-element">
-              <input value="Anmelden" type="submit" ng-click="login()" ng-show="!loggedIn" ng-disabled="loggingIn" class="btn btn-primary login-button">
-              <input value="Raus hier!" type="submit" ng-click="logout()" ng-show="loggedIn" class="btn btn-danger login-button">
-            </form>
+          <div class="col-xs-6">
+            <div id="login-form">
+              <form ng-class="userForm" role="form" class="form-inline">
+                <div class="form-group">
+                  <label for="userName" class="sr-only">Name</label>
+                  <input ng-model="userName" ng-show="!loggedIn" type="text" placeholder="Login" class="login-field">
+                </div>
+                <div class="form-group">
+                  <label for="userPassword" class="sr-only">Password  </label>
+                  <input ng-model="userPassword" type="password" placeholder="Password" ng-show="!loggedIn" class="login-field">
+                </div>
+                <div class="clearfix visible-md visible-sm visible-xs"> </div>
+                <input value="Anmelden" type="submit" ng-click="login()" ng-show="!loggedIn" ng-disabled="loggingIn" class="btn btn-primary login-button">
+                <input value="Raus hier!" type="submit" ng-click="logout()" ng-show="loggedIn" class="btn btn-danger login-button">
+              </form>
+            </div>
           </div>
         </div>
         <div class="row">
@@ -41,9 +50,9 @@
               <ul id="bash-elements">
                 <li class="exec">chat</li>
                 <li class="module">public</li>
-                <li class="module">german</li>
+                <li class="module">animals</li>
                 <li class="module">funnycats</li>
-                <li><a onclick="valueExpand()" class="value">127</a></li>
+                <li><a onclick="valueExpand()" class="value">incoming: 8</a></li>
               </ul>
             </div>
           </div>
@@ -53,21 +62,24 @@
     <div id="main-content">
       <div class="container">
         <div class="row">
-          <canvas class="animation"></canvas>
-        </div>
-        <div class="row">
-          <div class="col-xs-12 text-center">
-            <div id="bg-logo-relief-negative"> 
-              <h1>chocolate</h1>
-            </div>
+          <div id="bg-logo-relief-negative" class="col-xs-12 text-center"> 
+            <h1>chocolate</h1>
           </div>
         </div>
       </div>
     </div>
-    <footer class="footer"> 
-      <div class="container">
-        <div class="row"> 
-          <div class="col-xs-2 header-logo">Chatboxes go here </div>
+    <footer class="footer">
+      <div id="chat-bar" class="container">
+        <div class="row">
+          <div id="boostrap2" class="col-xs-2 chat-window">
+            <div id="boostrap12" class="col-xs-12">
+              <div class="panel panel-default">
+                <div class="panel-heading top-bar">
+                  <text class="hover">#FunnyCats</text>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </footer>
